@@ -16,7 +16,7 @@ const Nav = () => {
       <a href="/#">
         <AiOutlineHome />
       </a>
-      <a href="/#about">
+      <a href="#about">
         <FaRegUser size={15} />
       </a>
       <a href="/#experience">
