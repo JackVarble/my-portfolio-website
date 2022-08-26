@@ -11,11 +11,11 @@
 }
 
 :root {
-  --color-bg: #0f1922;
-  --color-bg-variant: #122029;
-  --color-primary: #4db5ff;
-  --color-primary-variant: #rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
+  --color-bg: #1d2228;
+  --color-bg-variant: #242c32;
+  --color-primary: #fb8122;
+  --color-primary-variant: rgba(255, 192, 144, 1);
+  --color-white: #e1e2e2;
   --color-light: rgba(255, 255, 255, 0.6);
 
   --transition: all 400ms ease;
@@ -40,7 +40,7 @@ body {
     var(--color-bg-variant) 100%
   );
   color: var(--color-white);
-  height: 100vh;
+  height: 100%;
   line-height: 1.7;
 }
 
@@ -65,6 +65,7 @@ h1 {
 
 section {
   margin-top: 8rem;
+  height: 100vh;
   h2,
   h5 {
     text-align: center;
@@ -93,14 +94,14 @@ a {
   width: max-content;
   display: inline-block;
   color: var(--color-primary);
-  padding: 0.75rem, 1.2rem;
+  padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: var(--transition);
 
   &:hover {
-    background: var(--color-white);
+    background: var(--color-primary-variant);
     color: var(--color-bg);
     border-color: transparent;
   }
