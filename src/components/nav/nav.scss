@@ -14,6 +14,10 @@
   border-radius: 3rem;
   backdrop-filter: blur(15px);
   transition: var(--transition);
+
+  a {
+    padding: 0.4rem;
+  }
 }
 
 .nav-top {
@@ -34,8 +38,5 @@
   @media screen and (max-width: 600px) {
     gap: 1rem;
     padding: 0.7rem 1.7rem;
-    a::after {
-      text-decoration: none;
-    }
   }
 }
