@@ -14,7 +14,7 @@
   --color-bg: #1d2228;
   --color-bg-variant: #242c32;
   --color-primary: #fb8122;
-  --color-primary-variant: rgba(255, 192, 144, 1);
+  --color-primary-variant: #d5986f;
   --color-white: #e1e2e2;
   --color-light: rgba(255, 255, 255, 0.6);
 
@@ -43,6 +43,7 @@ body {
   color: var(--color-white);
   height: 100%;
   line-height: 1.7;
+  background-color: #e5e5f7;
 }
 
 //-----------------Style Presets--------------------//
@@ -87,7 +88,7 @@ a {
   transition: var(--transition);
 
   &:hover {
-    color: var(--color-white);
+    color: var(--color-primary-variant);
   }
 }
 
