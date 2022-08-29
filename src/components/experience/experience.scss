@@ -1,3 +1,17 @@
+.title {
+  margin-top: 5rem;
+  text-align: center;
+  color: var(--color-light);
+}
+
+.initial-container {
+  margin-top: 3rem;
+}
+
+.second-container {
+  margin-top: 7rem;
+}
+
 .experience-container {
   position: relative;
   display: flex;
@@ -7,12 +21,11 @@
   article {
     color: var(--color-light);
     width: auto;
-    height: auto;
     display: grid;
     align-items: center;
     justify-items: center;
     font-size: 3rem;
-    margin-top: 7rem;
+
     transition: var(--transition);
 
     &:hover {
@@ -27,23 +40,22 @@
     }
   }
 
-  //===============MEDIA QUERIES TABLETS==============//
-  @media screen and (max-width: 1024px) {
-    article {
-      margin-top: 5rem;
-    }
-  }
-
   //===============MEDIA QUERIES PHONES==============//
   @media screen and (max-width: 600px) {
     article {
-      margin-top: 3rem;
       font-size: 2rem;
 
       .hidden {
+        display: block;
         font-size: 0.7rem;
         transform: translateY(2rem);
       }
     }
+  }
+}
+//===============MEDIA QUERIES TABLETS==============//
+@media screen and (max-width: 1024px) {
+  .second-container {
+    margin-top: 5rem;
   }
 }
