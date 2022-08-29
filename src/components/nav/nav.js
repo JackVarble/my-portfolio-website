@@ -1,7 +1,7 @@
 import React from "react";
 import useScrollPosition from "../../hooks/use-scroll-position";
 import { FaRegUser } from "react-icons/fa";
-import { BiMessageSquareDetail, BiBook } from "react-icons/bi";
+import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import "./nav.scss";
 
@@ -18,9 +18,6 @@ const Nav = () => {
       </a>
       <a href="#about">
         <FaRegUser size={15} />
-      </a>
-      <a href="/#experience">
-        <BiBook />
       </a>
       <a href="/#projects">
         <AiOutlineProject />

@@ -1,0 +1,49 @@
+.experience-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+
+  article {
+    color: var(--color-light);
+    width: auto;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 3rem;
+    margin-top: 7rem;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    .hidden {
+      display: none;
+      font-size: 1rem;
+      position: absolute;
+      transform: translateY(3rem);
+    }
+  }
+
+  //===============MEDIA QUERIES TABLETS==============//
+  @media screen and (max-width: 1024px) {
+    article {
+      margin-top: 5rem;
+    }
+  }
+
+  //===============MEDIA QUERIES PHONES==============//
+  @media screen and (max-width: 600px) {
+    article {
+      margin-top: 3rem;
+      font-size: 2rem;
+
+      .hidden {
+        font-size: 0.7rem;
+        transform: translateY(2rem);
+      }
+    }
+  }
+}

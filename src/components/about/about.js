@@ -1,5 +1,6 @@
 import React from "react";
 import ME from "../../assets/me-about.jpg";
+import Experience from "../experience/Experience";
 import { FaAward, FaUsers } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import "./about.scss";
@@ -47,6 +48,7 @@ const About = () => {
           </a>
         </div>
       </div>
+      <Experience />
     </section>
   );
 };
