@@ -1,20 +1,19 @@
 import React from "react";
-import Phone from "../../assets/iphone-mockupNBC.webp";
 
-const Template = () => {
+const Template = ({ name, children, img1, img2 }) => {
   return (
     <>
-      <div className="container">
-        <h1>Name</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-          aspernatur sapiente ducimus illum laboriosam culpa ratione blanditiis
-          ea suscipit quae ad excepturi, enim voluptate dolorum, commodi placeat
-          perferendis molestias repudiandae.
-        </p>
+      <div className="container grid">
+        <article className="quote-container">
+          <h1>{name}</h1>
+          <p>{children}</p>
+        </article>
       </div>
       <div className="phone-img-container">
-        <img src={Phone} alt="project on phone" />
+        <img src={img1} alt="project on phone" />
+      </div>
+      <div className="pad-img-container">
+        <img src={img2} alt="project on ipad" />
       </div>
     </>
   );

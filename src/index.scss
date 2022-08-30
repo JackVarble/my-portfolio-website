@@ -46,6 +46,11 @@ body {
   background-color: #e5e5f7;
 }
 
+#wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
 //-----------------Style Presets--------------------//
 
 .container {

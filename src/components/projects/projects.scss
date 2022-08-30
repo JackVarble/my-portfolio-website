@@ -1,8 +1,103 @@
-.phone-img-container {
-  position: absolute;
-  height: 20rem;
-  width: 20rem;
-  aspect-ratio: 1/1;
-  left: 60%;
-  transform: translateY(-10rem);
+#projects {
+  margin-top: 20rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+
+    .quote-container {
+      grid-column: 1 / 4;
+
+      p {
+        position: relative;
+        z-index: 2;
+        margin-top: 2rem;
+        line-height: 2;
+        font-size: 1.3rem;
+        color: var(--color-light);
+      }
+    }
+  }
+
+  .phone-img-container {
+    position: absolute;
+    height: 15rem;
+    z-index: 1;
+    aspect-ratio: 1/1;
+    left: 60%;
+    transform: translateY(-20rem);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  }
+  .pad-img-container {
+    position: absolute;
+    height: 30rem;
+    aspect-ratio: 1/1;
+    left: 65%;
+    transform: translateY(-25rem);
+  }
+}
+
+//===============MEDIA QUERIES TABLETS==============//
+@media screen and (max-width: 1024px) {
+  #projects {
+    margin-top: 15rem;
+
+    .quote-container {
+      grid-column: 1 / 4;
+
+      p {
+        position: relative;
+        z-index: 2;
+        margin-top: 2rem;
+        line-height: 1;
+        font-size: 1rem;
+        color: var(--color-light);
+      }
+    }
+
+    .phone-img-container {
+      height: 10rem;
+      left: 58%;
+      transform: translateY(-20rem);
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .pad-img-container {
+      height: 25rem;
+      left: 65%;
+      transform: translateY(-27rem);
+    }
+  }
+}
+
+//===============MEDIA QUERIES MOBILE==============//
+@media screen and (max-width: 600px) {
+  #projects {
+    margin-top: 10rem;
+
+    .grid {
+      display: flex;
+
+      .quote-container {
+        text-align: center;
+
+        h1 {
+          font-size: x-large;
+        }
+
+        p {
+          margin-top: 2rem;
+          line-height: 2;
+          font-size: 1rem;
+        }
+      }
+    }
+    .phone-img-container {
+      display: none;
+    }
+    .pad-img-container {
+      display: none;
+    }
+  }
 }
