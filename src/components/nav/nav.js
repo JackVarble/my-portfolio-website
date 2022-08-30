@@ -1,18 +1,12 @@
 import React from "react";
-import useScrollPosition from "../../hooks/use-scroll-position";
 import { FaRegUser } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import "./nav.scss";
 
 const Nav = () => {
-  const scrollPosition = useScrollPosition();
-
-  const navClasses =
-    scrollPosition > window.innerHeight ? "nav-top" : "nav-bottom";
-
   return (
-    <nav className={navClasses}>
+    <nav className="nav">
       <a href="/#">
         <AiOutlineHome />
       </a>
