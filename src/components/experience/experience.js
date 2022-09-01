@@ -40,9 +40,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <FaGitAlt />
-            </article>
+            <FaGitAlt className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 GIT
@@ -55,9 +53,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <FaHtml5 />
-            </article>
+            <FaHtml5 className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 HTML
@@ -70,9 +66,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <FaCss3Alt />
-            </article>
+            <FaCss3Alt className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 CSS
@@ -85,9 +79,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <SiJavascript />
-            </article>
+            <SiJavascript className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 JAVASCRIPT
@@ -105,9 +97,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <SiReact />
-            </article>
+            <SiReact className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 REACT
@@ -120,9 +110,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <FaNodeJs />
-            </article>
+            <FaNodeJs className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 NODEJS
@@ -135,9 +123,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <SiGraphql />
-            </article>
+            <SiGraphql className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 GRAPHQL
@@ -150,9 +136,7 @@ const Experience = () => {
             whileHover="visible"
             animate={isSmall ? "visible" : "hide"}
           >
-            <article>
-              <FaDocker />
-            </article>
+            <FaDocker className="icon" />
             <div className="hidden">
               <motion.div className="name" variants={nameVariants}>
                 DOCKER

@@ -20,8 +20,13 @@
     grid-row: 1;
     display: grid;
     justify-items: center;
+    transition: var(--transition);
 
-    article {
+    &:hover .icon {
+      color: var(--color-primary);
+    }
+
+    .icon {
       color: var(--color-light);
       grid-row: 1;
       width: 4rem;
@@ -29,11 +34,6 @@
       align-items: center;
       justify-content: center;
       font-size: 3rem;
-      transition: var(--transition);
-
-      &:hover {
-        color: var(--color-primary);
-      }
     }
 
     .hidden {
@@ -58,9 +58,10 @@
     gap: 10%;
 
     .grid-item {
-      article {
+      .icon {
         font-size: 2rem;
       }
+
       .hidden {
         .name {
           color: var(--color-white);
