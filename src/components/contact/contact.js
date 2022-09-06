@@ -37,7 +37,7 @@ const Contact = () => {
           <input
             name="email"
             type="email"
-            placeholder="Email address"
+            placeholder="Email Address"
             onChange={onChange}
             required
           />
