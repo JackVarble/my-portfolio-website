@@ -29,16 +29,7 @@
     span {
       font-size: 12px;
       padding: 3px;
-      color: red;
-      display: none;
-    }
-
-    input:invalid[focused="true"] {
-      border: 1px solid red;
-    }
-
-    input:invalid[focused="true"] ~ span {
-      display: block;
+      color: var(--color-error-text);
     }
 
     &::-webkit-input-placeholder {
@@ -47,6 +38,12 @@
     &::-moz-placeholder {
       font-family: "Poppins", sans-serif;
     }
+  }
+
+  .error input {
+    border: 2px solid var(--color-error-text);
+    background-color: var(--color-error-bg);
+    margin-bottom: 0;
   }
 
   .textarea {
@@ -69,6 +66,12 @@
     &:focus {
       border: 2px solid var(--color-primary);
     }
+  }
+
+  .error > .textarea {
+    border: 2px solid var(--color-error-text);
+    background-color: var(--color-error-bg);
+    margin-bottom: 0;
   }
 
   .btn-focus {
