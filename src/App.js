@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/header/header";
-import Nav from "./components/nav/nav";
+import Navigation from "./components/nav/Navigation";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import Contact from "./components/contact/Contact";
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div id="wrapper">
       <Header />
-      <Nav />
+      <Navigation />
       <About />
       <Projects />
       <Contact />

@@ -20,6 +20,7 @@
     grid-row: 1;
     display: grid;
     justify-items: center;
+    width: 4rem;
     transition: var(--transition);
 
     &:hover .icon {

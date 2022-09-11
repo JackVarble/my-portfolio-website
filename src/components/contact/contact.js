@@ -57,10 +57,10 @@ const Contact = () => {
     }
 
     const values = {
-      nameValue,
-      emailValue,
-      subjectValue,
-      messageValue,
+      nameValue: nameValue.trim(),
+      emailValue: emailValue.trim(),
+      subjectValue: subjectValue.trim(),
+      messageValue: messageValue.trim(),
     };
     console.log(values);
     nameReset();
@@ -120,7 +120,7 @@ const Contact = () => {
             value={messageValue}
             onChange={messageChangeHandler}
           />
-          {messageHasError && <span>Please provide a message</span>}
+          {messageHasError && <span>Please provide a message!</span>}
           <button type="submit" className="btn btn-primary btn-focus">
             Send Message
           </button>

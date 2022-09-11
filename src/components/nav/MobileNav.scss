@@ -1,17 +1,18 @@
-.nav {
+.mobile-nav {
   background: rgba(0, 0, 0, 0.3);
+  height: 2.5rem;
+  overflow-y: hidden;
   width: 100%;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
-  padding: 0.7rem 5rem;
   z-index: 3;
   position: fixed;
   top: 0;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.7rem 1.7rem;
   backdrop-filter: blur(15px);
-  transition: var(--transition);
 
   .icon-container {
     position: relative;
@@ -19,28 +20,18 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
+    left: 65%;
     gap: 10%;
 
     .icon {
       grid-column: 1;
       position: relative;
     }
-    .hidden {
-      overflow: hidden;
-      height: fit-content;
+    .title-nav {
+      width: max-content;
       grid-column: 2;
-
-      .title-nav {
-        width: max-content;
-
-        font-size: 14px;
-        text-align: center;
-      }
+      font-size: 14px;
+      text-align: center;
     }
-  }
-
-  @media screen and (max-width: 600px) {
-    gap: 1rem;
-    padding: 0.7rem 1.7rem;
   }
 }
