@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
+import BurgerMenu from "./BurgerMenu";
 import { motion } from "framer-motion";
 
 import "./MobileNav.scss";
 
 const MobileNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClickHandler = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="mobile-nav">
+    <motion.nav
+      className="mobile-nav"
+      initial={isOpen ? "open" : "closed"}
+      animate={isOpen ? "open" : "closed"}
+    >
+      <div className="icon-container burger-container">
+        <BurgerMenu onClick={onClickHandler} />
+      </div>
       <a href="/#" className="icon-container">
         <AiOutlineHome className="icon" />
         <p className="title-nav">Home</p>
@@ -25,7 +39,7 @@ const MobileNav = () => {
         <BiMessageSquareDetail className="icon" />
         <p className="title-nav">Contact Me</p>
       </a>
-    </nav>
+    </motion.nav>
   );
 };
 
