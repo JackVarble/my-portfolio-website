@@ -38,19 +38,19 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  color: var(--color-white);
+  height: 100%;
+  width: 100vw;
+  line-height: 1.7;
+  background-color: var(--color-primary);
+}
+
+.mobile {
   background: linear-gradient(
     var(--color-bg) 70%,
     var(--color-bg-variant) 100%
   );
-  color: var(--color-white);
-  height: 100%;
-  line-height: 1.7;
-  background-color: #e5e5f7;
-}
-
-#wrapper {
   position: relative;
-  overflow-x: hidden;
 }
 
 //-----------------Style Presets--------------------//
@@ -74,7 +74,7 @@ h1 {
 
 section {
   margin-top: 8rem;
-  height: 100%;
+
   h2,
   h5 {
     text-align: center;
@@ -140,6 +140,10 @@ img {
 
 //===============MEDIA QUERIES MOBILE==============//
 @media screen and (max-width: 600px) {
+  #contact {
+    scroll-margin-top: -10em;
+  }
+
   .container {
     width: var(--container-width-sm);
   }

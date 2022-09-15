@@ -55,12 +55,13 @@ const Nav = () => {
   return (
     <nav className="nav">
       <motion.a
-        href="/#"
+        href="/#home"
         className="icon-container"
         initial={isSmall ? "visible" : "hide"}
         whileHover="visible"
         animate={isSmall ? "visible" : "hide"}
         variants={linkVariants}
+        exact
       >
         <AiOutlineHome className="icon" />
         <motion.span className="hidden" variants={containerVariants}>

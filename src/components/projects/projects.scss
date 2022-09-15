@@ -1,5 +1,7 @@
 #projects {
+  scroll-margin-top: 18rem;
   margin-top: 20rem;
+  height: 100%;
 
   .grid {
     display: grid;
@@ -97,8 +99,6 @@
 //===============MEDIA QUERIES MOBILE==============//
 @media screen and (max-width: 600px) {
   #projects {
-    margin-top: 10rem;
-
     .grid {
       display: flex;
       margin-top: 20rem;

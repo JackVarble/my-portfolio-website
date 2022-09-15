@@ -3,11 +3,8 @@
 }
 
 .mobile-nav {
-  background: rgba(0, 0, 0, 0.3);
   height: 4rem;
-  overflow-y: hidden;
-  width: 100%;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  width: 100vw;
   z-index: 3;
   position: fixed;
   top: 0;
@@ -16,7 +13,6 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 0.7rem 1.7rem;
-  backdrop-filter: blur(15px);
 
   .icon-container {
     position: relative;
@@ -24,24 +20,38 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    left: 65%;
+    margin: 2rem 0;
+    left: 40%;
     gap: 10%;
 
     .icon {
       grid-column: 1;
       position: relative;
+      color: var(--color-white);
     }
     .title-nav {
       width: max-content;
       grid-column: 2;
-      font-size: 14px;
+      font-size: 24px;
       text-align: center;
+      color: var(--color-white);
     }
   }
 
+  .first {
+    margin-top: 14rem;
+  }
+
   .burger-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     top: 0.1rem;
     left: 89%;
+    gap: 10%;
+    z-index: 4;
 
     .burger-menu {
       display: grid;
@@ -51,7 +61,6 @@
       gap: 0;
       height: 2.5rem;
       width: 2.5rem;
-      // border: 1px solid var(--color-white);
       border-radius: 5px;
 
       .burger-bar-left {
@@ -65,6 +74,7 @@
       .burger-bar-right {
         grid-column: 2;
         height: 0.2rem;
+        width: 102%;
         background: var(--color-white);
         border-radius: 0 2px 2px 0;
       }
