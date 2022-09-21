@@ -37,7 +37,7 @@ const App = () => {
       overflowX: "hidden",
       transition: {
         type: "spring",
-        duration: 0.2,
+        duration: 0.5,
       },
     },
   };
