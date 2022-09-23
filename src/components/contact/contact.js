@@ -74,10 +74,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_nv66vcc",
-        "template_portfolio",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "8-cqVLj0tsKscnPar"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
