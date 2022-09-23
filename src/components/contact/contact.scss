@@ -74,11 +74,25 @@
     margin-bottom: 0;
   }
 
-  .btn-focus {
+  .flex-container {
+    display: flex;
+    align-items: center;
     margin-top: 1rem;
 
-    &:focus {
-      border: 2px solid var(--color-primary-variant);
+    .btn-focus {
+      &:focus {
+        border: 2px solid var(--color-primary-variant);
+      }
+    }
+
+    .modal-success {
+      padding: 0 1.2rem;
+      color: var(--color-white);
+    }
+
+    .error {
+      font-size: 14px;
+      color: var(--color-error-text);
     }
   }
 }

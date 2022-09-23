@@ -1,4 +1,7 @@
+import React, { useRef, useState } from "react";
 import useInput from "../../hooks/use-input";
+import emailjs from "emailjs-com";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "./Contact.scss";
 
@@ -6,6 +9,11 @@ const emailFormat = (email) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
 const Contact = () => {
+  const formRef = useRef();
+
+  const [successVisible, setSuccessVisible] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const {
     value: nameValue,
     isValid: nameIsValid,
@@ -56,13 +64,38 @@ const Contact = () => {
       return;
     }
 
-    const values = {
-      nameValue: nameValue.trim(),
-      emailValue: emailValue.trim(),
-      subjectValue: subjectValue.trim(),
-      messageValue: messageValue.trim(),
-    };
-    console.log(values);
+    // const values = {
+    //   nameValue: nameValue.trim(),
+    //   emailValue: emailValue.trim(),
+    //   subjectValue: subjectValue.trim(),
+    //   messageValue: messageValue.trim(),
+    // };
+    // console.log(values);
+
+    emailjs
+      .sendForm(
+        "service_nv66vcc",
+        "template_portfolio",
+        formRef.current,
+        "8-cqVLj0tsKscnPar"
+      )
+      .then(
+        (result) => {
+          setSuccessVisible(true);
+          console.log(result.text);
+          setTimeout(() => {
+            setSuccessVisible(false);
+          }, [2000]);
+        },
+        (error) => {
+          setIsError(true);
+          console.log(error.text);
+          setTimeout(() => {
+            setIsError(false);
+          }, [2000]);
+        }
+      );
+
     nameReset();
     emailReset();
     messageReset();
@@ -78,7 +111,7 @@ const Contact = () => {
   return (
     <section id="contact" className="container">
       <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div className={nameClasses}>
           <label>Name</label>
           <input
@@ -121,9 +154,33 @@ const Contact = () => {
             onChange={messageChangeHandler}
           />
           {messageHasError && <span>Please provide a message!</span>}
-          <button type="submit" className="btn btn-primary btn-focus">
-            Send Message
-          </button>
+          <div className="flex-container">
+            <button type="submit" className="btn btn-primary btn-focus">
+              Send Message
+            </button>
+            <AnimatePresence>
+              {successVisible && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  className="modal-success"
+                >
+                  Submitted Successfully!
+                </motion.div>
+              )}
+              {isError && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  className="modal-success error"
+                >
+                  Something went wrong! Please try again.
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </form>
     </section>

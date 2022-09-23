@@ -61,7 +61,6 @@ const Nav = () => {
         whileHover="visible"
         animate={isSmall ? "visible" : "hide"}
         variants={linkVariants}
-        exact
       >
         <AiOutlineHome className="icon" />
         <motion.span className="hidden" variants={containerVariants}>
