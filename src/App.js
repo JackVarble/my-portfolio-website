@@ -20,8 +20,9 @@ const App = () => {
       left: 0,
       overflowY: "auto",
       overflowX: "hidden",
+      pointerEvents: "all",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
         delay: 0.15,
       },
@@ -35,8 +36,9 @@ const App = () => {
       left: "-12rem",
       overflowY: "hidden",
       overflowX: "hidden",
+      pointerEvents: "none",
       transition: {
-        type: "spring",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.3,
       },
     },

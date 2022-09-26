@@ -12,7 +12,7 @@ const MobileNav = ({ onClick, menuClick }) => {
     closed: {
       backgroundColor: "var(--color-bg)",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.1,
         delay: 0.25,
       },
@@ -20,7 +20,7 @@ const MobileNav = ({ onClick, menuClick }) => {
     open: {
       backgroundColor: "transparent",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.1,
       },
     },
@@ -29,13 +29,13 @@ const MobileNav = ({ onClick, menuClick }) => {
   const menuVariant = {
     closed: {
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.01,
       },
     },
     open: {
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.1,
         delayChildren: 0.1,
         staggerChildren: 0.03,
@@ -48,8 +48,7 @@ const MobileNav = ({ onClick, menuClick }) => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        bounce: 0,
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.01,
       },
     },
@@ -57,8 +56,7 @@ const MobileNav = ({ onClick, menuClick }) => {
       opacity: 0,
       y: "-2rem",
       transition: {
-        type: "spring",
-        bounce: 0,
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.01,
       },
     },

@@ -10,7 +10,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       y: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -19,7 +19,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "3px",
       y: "5px",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -31,7 +31,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       y: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -40,7 +40,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "-3px",
       y: "5px",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -51,7 +51,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       opacity: 1,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -59,7 +59,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "-2rem",
       opacity: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -71,7 +71,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       y: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -80,7 +80,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "3px",
       y: "-5px",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -92,7 +92,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       y: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -101,7 +101,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "-3px",
       y: "-5px",
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.2,
       },
     },
@@ -112,7 +112,7 @@ const BurgerMenu = ({ onClick }) => {
       x: 0,
       opacity: 1,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.1,
       },
     },
@@ -120,7 +120,7 @@ const BurgerMenu = ({ onClick }) => {
       x: "2rem",
       opacity: 0,
       transition: {
-        type: "transition",
+        ease: [0.6, 0.01, -0.05, 0.9],
         duration: 0.1,
       },
     },

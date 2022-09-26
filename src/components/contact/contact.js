@@ -184,6 +184,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{
+                    ease: [0.6, 0.01, -0.05, 0.9],
                     y: { duration: 0.2 },
                     opacity: { duration: 0.1 },
                   }}
