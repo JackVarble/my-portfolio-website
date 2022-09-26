@@ -1,0 +1,112 @@
+#contact {
+  margin-top: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+
+    input {
+      padding: 0.9rem;
+      margin: 0 0 1rem 0;
+      border-radius: 5px;
+      border: 1px solid gray;
+      font-family: "Poppins", sans-serif;
+
+      &:focus {
+        border: 2px solid var(--color-primary);
+      }
+    }
+
+    label {
+      font-size: 1rem;
+      color: var(--color-light);
+    }
+
+    span {
+      font-size: 12px;
+      padding: 3px;
+      color: var(--color-error-text);
+    }
+
+    &::-webkit-input-placeholder {
+      font-family: "Poppins", sans-serif;
+    }
+    &::-moz-placeholder {
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .error input {
+    border: 2px solid var(--color-error-text);
+    background-color: var(--color-error-bg);
+    margin-bottom: 0;
+  }
+
+  .textarea {
+    border-radius: 5px;
+    width: 30rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    line-height: 1.7rem;
+    border: 1px solid gray;
+    font-family: "Poppins", sans-serif;
+    resize: none;
+
+    &::-webkit-input-placeholder {
+      font-family: "Poppins", sans-serif;
+    }
+    &::-moz-placeholder {
+      font-family: "Poppins", sans-serif;
+    }
+
+    &:focus {
+      border: 2px solid var(--color-primary);
+    }
+  }
+
+  .error > .textarea {
+    border: 2px solid var(--color-error-text);
+    background-color: var(--color-error-bg);
+    margin-bottom: 0;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    .btn-focus {
+      &:focus {
+        border: 2px solid var(--color-primary-variant);
+      }
+    }
+
+    .modal-success {
+      padding: 0 1.2rem;
+      color: var(--color-white);
+    }
+
+    .error {
+      font-size: 14px;
+      color: var(--color-error-text);
+    }
+  }
+}
+
+//===============MEDIA QUERIES TABLETS==============//
+@media screen and (max-width: 1024px) {
+  #contact {
+    margin-top: 40rem;
+  }
+}
+
+//===============MEDIA QUERIES MOBILE==============//
+@media screen and (max-width: 600px) {
+  #projects {
+    margin-top: 10rem;
+  }
+}

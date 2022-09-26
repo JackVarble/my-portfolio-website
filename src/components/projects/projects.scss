@@ -1,0 +1,133 @@
+#projects {
+  scroll-margin-top: 18rem;
+  margin-top: 20rem;
+  height: 100%;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-top: 30rem;
+
+    .quote-container {
+      grid-column: 1 / 4;
+
+      h1 {
+        line-height: 1.5;
+        color: var(--color-primary);
+      }
+
+      p {
+        position: relative;
+        z-index: 2;
+        margin-top: 2rem;
+        line-height: 2;
+        font-size: 1.3rem;
+        color: var(--color-light);
+      }
+      .link-container {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 3rem;
+        color: var(--color-primary);
+        align-items: center;
+
+        a {
+          margin-right: 0.9rem;
+        }
+
+        &:hover {
+          color: var(--color-primary-variant);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .phone-img-container {
+    position: absolute;
+    height: 15rem;
+    z-index: 1;
+    aspect-ratio: 1/1;
+    left: 60%;
+    transform: translateY(-22rem);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  }
+  .pad-img-container {
+    position: absolute;
+    height: 30rem;
+    aspect-ratio: 1/1;
+    left: 65%;
+    transform: translateY(-28rem);
+  }
+}
+
+//===============MEDIA QUERIES TABLETS==============//
+@media screen and (max-width: 1024px) {
+  #projects {
+    margin-top: 15rem;
+
+    .quote-container {
+      grid-column: 1 / 4;
+
+      p {
+        position: relative;
+        z-index: 2;
+        margin-top: 2rem;
+        line-height: 1;
+        font-size: 1rem;
+        color: var(--color-light);
+      }
+    }
+
+    .phone-img-container {
+      height: 10rem;
+      left: 58%;
+      transform: translateY(-20rem);
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .pad-img-container {
+      height: 25rem;
+      left: 65%;
+      transform: translateY(-27rem);
+    }
+  }
+}
+
+//===============MEDIA QUERIES MOBILE==============//
+@media screen and (max-width: 600px) {
+  #projects {
+    .grid {
+      display: flex;
+      margin-top: 20rem;
+
+      .quote-container {
+        text-align: center;
+
+        h1 {
+          font-size: x-large;
+        }
+
+        p {
+          margin-top: 2rem;
+          line-height: 2;
+          font-size: 1rem;
+          text-align: left;
+        }
+        .link-container {
+          margin-top: 2rem;
+          margin-left: 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .phone-img-container {
+      display: none;
+    }
+    .pad-img-container {
+      display: none;
+    }
+  }
+}
