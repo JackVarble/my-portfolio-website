@@ -72,6 +72,11 @@ const Contact = () => {
     // };
     // console.log(values);
 
+    // setSuccessVisible(true);
+    // setTimeout(() => {
+    //   setSuccessVisible(false);
+    // }, [2000]);
+
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -164,6 +169,10 @@ const Contact = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
+                  transition={{
+                    y: { duration: 0.2 },
+                    opacity: { duration: 0.1 },
+                  }}
                   className="modal-success"
                 >
                   Submitted Successfully!
@@ -174,6 +183,10 @@ const Contact = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
+                  transition={{
+                    y: { duration: 0.2 },
+                    opacity: { duration: 0.1 },
+                  }}
                   className="modal-success error"
                 >
                   Something went wrong! Please try again.
