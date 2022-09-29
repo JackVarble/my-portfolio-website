@@ -11,7 +11,7 @@ import "./Nav.scss";
 
 const Nav = () => {
   const isSmall = useMediaQuery("(max-width: 1024px)");
-  const scrollDirection = useScrollDirection();
+  const scrollVisible = useScrollDirection();
 
   const nameVariants = {
     hide: {
@@ -56,7 +56,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={scrollDirection === "up" ? "nav" : "nav-hidden nav"}>
+    <nav className="nav" style={{ top: scrollVisible ? "0" : "-60px" }}>
       <motion.a
         href="/#home"
         className="icon-container"

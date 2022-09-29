@@ -1,27 +1,31 @@
 import { useState, useEffect } from "react";
+import { debounce } from "../utilities/debounce";
 
 const useScrollDirection = () => {
-  const [scrollDirection, setScrollDirection] = useState("up");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => {
+    const currentScrollPos = window.scrollY;
+
+    console.log("working");
+
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+    );
+
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+    window.addEventListener("scroll", handleScroll);
 
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (direction !== scrollDirection) {
-        setScrollDirection(direction);
-      }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-    };
-    window.addEventListener("scroll", updateScrollDirection);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
 
-    return () => {
-      window.removeEventListener("scroll", updateScrollDirection);
-    };
-  }, [scrollDirection]);
-
-  return scrollDirection;
+  return visible;
 };
 
 export default useScrollDirection;
