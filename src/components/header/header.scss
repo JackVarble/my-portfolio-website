@@ -1,61 +1,63 @@
 header {
   height: 100vh;
-  padding-top: 7rem;
+  // padding-top: 7rem;
   overflow: hidden;
 }
 
 .header-container {
-  text-align: center;
+  // text-align: center;
   height: 100%;
   position: relative;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // gap: 1rem;
 }
 
 .action-buttons {
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   display: flex;
   gap: 1.2rem;
   justify-content: center;
 }
 
-.header-socials {
+.tagline-container {
+  position: absolute;
+  z-index: 1;
+  margin-top: 18rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  position: absolute;
-  left: 0;
-  bottom: 3rem;
+  align-items: flex-start;
 
-  &::after {
-    content: "";
-    height: 3rem;
-    width: 1px;
-    background: var(--color-primary);
+  .hello {
+    color: var(--color-primary);
+    margin-left: 0.75rem;
+  }
+
+  .name {
+    font-size: 5rem;
+    color: var(--color-white);
+  }
+
+  .stinger {
+    color: var(--color-light);
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
 .img-container {
-  background: linear-gradient(var(--color-primary), transparent);
-  width: 22rem;
-  height: 30rem;
-  position: absolute;
-  left: calc(50% - 11rem);
-  margin-top: 4rem;
-  border-radius: 12rem 12rem 0 0;
-  overflow: hidden;
+  width: 100%;
+  height: 40rem;
+  position: relative;
 
   img {
-    margin-top: 3rem;
+    position: absolute;
+    scale: 0.75;
+    left: 20rem;
+    top: -7rem;
   }
-}
-
-.scroll-down {
-  position: absolute;
-  right: -2.3rem;
-  bottom: 5rem;
-  transform: rotate(90deg);
-  font-weight: 300;
-  font-size: 0.9rem;
 }
 
 //===============MEDIA QUERIES TABLETS==============//
@@ -67,8 +69,7 @@ header {
 
 //===============MEDIA QUERIES MOBILE==============//
 @media screen and (max-width: 600px) {
-  .header-socials,
-  .scroll-down {
+  .header-socials {
     display: none;
   }
 }

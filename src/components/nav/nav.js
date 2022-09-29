@@ -4,11 +4,14 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../../hooks/use-media-query";
+import CV from "../../assets/cv.pdf";
+import useScrollDirection from "../../hooks/use-scroll-direction";
 
 import "./Nav.scss";
 
 const Nav = () => {
   const isSmall = useMediaQuery("(max-width: 1024px)");
+  const scrollDirection = useScrollDirection();
 
   const nameVariants = {
     hide: {
@@ -53,7 +56,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="nav">
+    <nav className={scrollDirection === "up" ? "nav" : "nav-hidden nav"}>
       <motion.a
         href="/#home"
         className="icon-container"
@@ -111,6 +114,9 @@ const Nav = () => {
           </motion.p>
         </motion.span>
       </motion.a>
+      <a href={CV} target="_blank" rel="noreferrer" className="btn btn-resume">
+        My Resumé
+      </a>
     </nav>
   );
 };
