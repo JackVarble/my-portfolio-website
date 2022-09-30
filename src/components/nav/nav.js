@@ -5,13 +5,11 @@ import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../../hooks/use-media-query";
 import CV from "../../assets/cv.pdf";
-import useScrollDirection from "../../hooks/use-scroll-direction";
 
 import "./Nav.scss";
 
 const Nav = () => {
   const isSmall = useMediaQuery("(max-width: 1024px)");
-  const scrollVisible = useScrollDirection();
 
   const nameVariants = {
     hide: {
@@ -56,7 +54,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="nav" style={{ top: scrollVisible ? "0" : "-60px" }}>
+    <motion.nav className="nav">
       <motion.a
         href="/#home"
         className="icon-container"
@@ -117,7 +115,7 @@ const Nav = () => {
       <a href={CV} target="_blank" rel="noreferrer" className="btn btn-resume">
         My Resumé
       </a>
-    </nav>
+    </motion.nav>
   );
 };
 

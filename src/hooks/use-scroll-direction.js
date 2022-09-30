@@ -6,7 +6,7 @@ const useScrollDirection = () => {
   const [visible, setVisible] = useState(true);
 
   const handleScroll = debounce(() => {
-    const currentScrollPos = window.scrollY;
+    const currentScrollPos = document.getElementsById("scroll").scrollY;
 
     console.log("working");
 
@@ -20,9 +20,10 @@ const useScrollDirection = () => {
   }, 100);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const windowRep = document.getElementsById("scroll");
+    windowRep.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => windowRep.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
 
   return visible;
